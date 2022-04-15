@@ -32,6 +32,7 @@ export const transformerDirectory = path.join(
 const transformsWithPostTransform = [
     "refine1-to-refine2",
     "refine2-to-refine3",
+    "react-router-v5-to-v6",
 ];
 
 export function checkGitStatus(force) {
@@ -118,6 +119,10 @@ export function runTransform({ files, flags, transformer }) {
 }
 
 const TRANSFORMER_INQUIRER_CHOICES = [
+    {
+        name: "react-router-v5-to-v6: Transform from refine react-router v5 to v6",
+        value: "react-router-v5-to-v6",
+    },
     {
         name: "refine2-to-refine3: Transform from refine 2.x.x to at least 3.0.0",
         value: "refine2-to-refine3",
